@@ -1,0 +1,132 @@
+/* Google Font (optional but cute) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --pink: #ff5e8a;
+  --light-pink: #ffe4ec;
+  --dark-pink: #c9184a;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a0d24;
+}
+
+/* Main container */
+.container {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  color: var(--dark-pink);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Subtext */
+p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+/* Card / message box */
+.card {
+  background: var(--light-pink);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  /* Reserve space so growth doesn’t overlap header */
+  min-height: 120px;
+}
+
+/* Buttons */
+button {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(255, 94, 138, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 94, 138, 0.5);
+}
+
+/* Hearts (optional decorative element) */
+.heart {
+  color: var(--pink);
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+#yes-button {
+  background: #ff5e8a;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+
+font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+/* NO button */
+#no-button {
+  background: #ddd;
+  color: #555;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}

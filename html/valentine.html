@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJ I Have a Question</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="header">be my valentine? </h1>
+            <div class="buttons-wrapper">
+                <button id="yes-button" onclick="location.href='plans.html'">Yes!</button>
+                <button id="no-button">Hell no</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        const yesBtn = document.getElementById("yes-button");
+        const noBtn = document.getElementById("no-button");
+        const header = document.getElementById("header");
+        const textChoices =
+        [
+        "Let's try that again...",
+        "Think about it...",
+        "Please say yes!",
+        "Please..........?",
+        "Pretty please?",
+        "Oh come on that's just mean",
+        "Are you sure?",
+        "Maybe you misclicked?",
+        "One more time?",
+        "You sure about that?",
+        "That felt unnecessary",
+        "Wow. Just wow.",
+        "Interesting choice",
+        "Bold move",
+        "You really hit no again?",
+        "Just hear me out",
+        "Give it another thought",
+        "This could be fun",
+        "No pressure or anything",
+        "I'm asking nicely",
+        "This is getting personal",
+        "You're testing me",
+        "Don't be like that",
+        "That hurt a little",
+        "Okay but why though",
+        "That was cold",
+        "My feelings...",
+        "You didn't have to do me like that",
+        "Let's pretend that didn't happen",
+        "You still have time to reconsider",
+        "I believe in you",
+        "You're better than this",
+        "This could've been easy",
+        "I thought we were friends",
+        "Now I'm sad",
+        "This is awkward",
+        "You enjoy chaos, don't you?",
+        "The other button is right there",
+        "The yes button looks nicer",
+        "The yes button misses you",
+        "This is your final answer?",
+        "You sure you want to lock that in?",
+        "Think very carefully",
+        "I'm running out of patience",
+        "Still no, huh?",
+        "At least think about it",
+        "Okay but seriously",
+        "I'm begging a little",
+        "Please though",
+        "Just say yes",
+        "For me?",
+        "With a cherry on top?",
+        "You're breaking my heart",
+        "This feels targeted",
+        "Do you hate happiness?",
+        "The universe disagrees",
+        "This timeline is cursed",
+        "Destiny says yes",
+        "You can't keep doing this forever",
+        "This button is tired",
+        "Have mercy",
+        "I won't ask again (lie)",
+        "You're really committed to this",
+        "Be honest with yourself",
+        "This could be cute",
+        "You're making this harder than it needs to be",
+        "I trusted you",
+        "Don't make me ask again",
+        "That was unnecessary",
+        "We're so close",
+        "Just once",
+        "Why are you like this",
+        "This could've been romantic",
+        "You chose violence",
+        "Okay now I'm concerned",
+        "Stop resisting",
+        "Say yes already",
+        "This is getting ridiculous",
+        "I'm still hopeful",
+        "This could end right now",
+        "Last chance (probably)",
+        "Don't overthink it",
+        "You know you want to",
+        "Just do it",
+        "Yes is the correct answer",
+        "I'm not mad, just disappointed"
+        ]
+
+        let scale = 1;
+        let fontSize = 1;
+        let padY = 0.8;
+        let padX = 1.6;
+
+        noBtn.addEventListener("click", () => {
+            fontSize += 1;            // YES text grows
+            padY += 0.10;             // YES padding grows
+            padX += 0.20;
+
+            yesBtn.style.fontSize = fontSize + "rem";
+            yesBtn.style.padding = `${padY}rem ${padX}rem`;
+            header.innerText = textChoices[Math.floor(Math.random() * textChoices.length)];
+        });
+    </script>
+</html>
